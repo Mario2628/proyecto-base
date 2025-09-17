@@ -7,23 +7,39 @@ class Operaciones:
     def leerNumeros(self):
         while True:
             try:
-                self.num1 = int(input("Número 1:"))
+                self.num1 = int(input("Número 1: "))
                 break
             except Exception:
                 print("Número inválido")
                 continue
         while True:
             try:
-                self.num2 = int(input("Número 2:"))
+                self.num2 = int(input("Número 2: "))
                 break
             except Exception:
                 print("Número inválido")
                 continue    
     
     def sumar(self):
-        self.resultado = "La suma de " + str(self.num1) + " + " + str(self.num2) + " es igula a " + str(self.num1 + self.num2)
+        self.resultado = f"La suma de {self.num1} + {self.num2} es igual a {self.num1 + self.num2}"
+    
+    def restar(self):
+        self.resultado = f"La resta de {self.num1} - {self.num2} es igual a {self.num1 - self.num2}"
+    
+    def multiplicar(self):
+        self.resultado = f"La multiplicación de {self.num1} * {self.num2} es igual a {self.num1 * self.num2}"
+    
+    def dividir(self):
+        if self.num2 != 0:
+            self.resultado = f"La división de {self.num1} / {self.num2} es igual a {self.num1 / self.num2}"
+        else:
+            self.resultado = "No se puede dividir entre cero"
+    
+    def modulo(self):
+        if self.num2 != 0:
+            self.resultado = f"El módulo de {self.num1} % {self.num2} es igual a {self.num1 % self.num2}"
+        else:
+            self.resultado = "No se puede calcular el módulo con divisor cero"
     
     def mostrarResultado(self):
         print(self.resultado)
-        
-        
